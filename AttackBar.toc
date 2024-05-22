@@ -1,0 +1,5 @@
+## Interface: 11200
+## Title: Attack bar
+## Notes: Shows weapon swing / attack timers
+## Author: MikeBeloborodov
+AttackBar.xml

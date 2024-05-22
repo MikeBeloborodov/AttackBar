@@ -1,0 +1,112 @@
+<Ui>
+	<Script file="AttackBar.lua"/>
+	<StatusBar name="EnemyAttackBar" drawLayer="BORDER" toplevel="true" movable="true" enableMouse="true" parent="UIParent" hidden="true" alpha="0.9">
+		<Size>
+			<AbsDimension x="173" y="10" />
+		</Size>
+
+		<Anchors>
+			<Anchor point="CENTER">
+				<Offset>
+					<AbsDimension x="0" y="0" />
+				</Offset>
+			</Anchor>
+		</Anchors>
+
+		<Layers>
+			<Layer level="BORDER">
+				<Texture name="$parentBorder" file="Interface\Tooltips\UI-StatusBar-Border">
+					<Size>
+						<AbsDimension x="180" y="17" />
+					</Size>
+
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="4" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+
+				<FontString name="$parentSpeed" inherits="GameFontNormalSmall" text="">
+					<Size x="30" y="17" />
+
+					<Anchors>
+						<Anchor point="RIGHT">
+							<Offset x="-5" y="1" />
+						</Anchor>
+					</Anchors>
+
+					<Color r="1" g="1" b="1" a="0.8" />
+				</FontString>
+			</Layer>
+		</Layers>
+
+		<BarTexture file="Interface\TargetingFrame\UI-StatusBar" />
+		<BarColor r="1.0" g="0.0" b="0.0"/>
+
+		<Scripts>
+			<OnLoad>EnemyAttackBar_OnLoad()</OnLoad>
+			<OnEvent>EnemyAttackBar_OnEvent()</OnEvent>
+			<OnUpdate>EnemyAttackBar_OnUpdate()</OnUpdate>
+			<OnDragStart>this:StartMoving()</OnDragStart>
+			<OnDragStop>this:StopMovingOrSizing()</OnDragStop>
+		</Scripts>
+	</StatusBar>
+
+	<StatusBar name="PlayerAttackBar" drawLayer="BORDER" toplevel="true" movable="true" enableMouse="true" parent="UIParent" hidden="true" alpha="0.9">
+		<Size>
+			<AbsDimension x="173" y="10" />
+		</Size>
+
+		<Anchors>
+			<Anchor point="CENTER">
+				<Offset>
+					<AbsDimension x="0" y="0" />
+				</Offset>
+			</Anchor>
+		</Anchors>
+
+		<Layers>
+			<Layer level="BORDER">
+				<Texture name="$parentBorder" file="Interface\Tooltips\UI-StatusBar-Border">
+					<Size>
+						<AbsDimension x="180" y="17" />
+					</Size>
+
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="4" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+
+				<FontString name="$parentSpeed" inherits="GameFontNormalSmall" text="">
+					<Size x="30" y="17" />
+
+					<Anchors>
+						<Anchor point="RIGHT">
+							<Offset x="-5" y="1" />
+						</Anchor>
+					</Anchors>
+
+					<Color r="1" g="1" b="1" a="0.8" />
+				</FontString>
+			</Layer>
+		</Layers>
+
+		<BarTexture file="Interface\TargetingFrame\UI-StatusBar" />
+		<BarColor r="0.0" g="0.0" b="1.0"/>
+
+		<Scripts>
+			<OnLoad>PlayerAttackBar_OnLoad()</OnLoad>
+			<OnEvent>PlayerAttackBar_OnEvent()</OnEvent>
+			<OnUpdate>PlayerAttackBar_OnUpdate()</OnUpdate>
+			<OnDragStart>this:StartMoving()</OnDragStart>
+			<OnDragStop>this:StopMovingOrSizing()</OnDragStop>
+		</Scripts>
+	</StatusBar>
+</Ui>
